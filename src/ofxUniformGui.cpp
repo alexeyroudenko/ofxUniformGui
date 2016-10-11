@@ -134,15 +134,14 @@ void ofxUniformGui::addShader(ofShader *shader, string filename) {
     }
     
     if (!shaders[shader].second.empty()) {
-
-        ofParameterGroup paramGroup;
-        paramGroup.setName(filename);
+        
+        settings.setName(filename);
         
         for (auto param : shaders[shader].second) {
-            paramGroup.add(*param);
+            settings.add(*param);
         }
         
-        panel.add(paramGroup);
+        panel.add(settings);
     }
 
 }

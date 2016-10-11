@@ -29,8 +29,10 @@ public:
     
     void setShowKey(char k) { showKey = k; }
     
-protected:
     ofxPanel panel;
+    ofParameterGroup settings;
+    
+protected:
 
     char showKey;
     bool visible;
